@@ -107,7 +107,34 @@
         <div class="col-md-3 work-cats" id="cat1">
           <img src="images/print/12inMattressBox_Pallet.jpg"
         </div>
-      </div>   
+      </div>
+      <div class="col-md-12">
+        <div class="col-md-8 fetchContainer">
+            <h1>Zodiac Signs</h1>
+            <form action="#" method="GET" class="form js-form" >
+                <select class="signSelector">
+                    <option value="All">All Signs</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+                <button type ="submit" id="signSubmit">Fetch</button>
+            </form>
+        </div>
+    </div>
+    <div class="col">
+        <ul class="col-md-12 js-result zodiac-box-container"></ul>
+        <ul class="col-md-12 js-error"></ul>
+    </div>   
     </div>
  </main>
 <footer>
