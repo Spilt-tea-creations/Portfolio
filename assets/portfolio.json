@@ -1,0 +1,76 @@
+{
+    "projects": [
+      {
+        "img": "12inMattressBox.jpg",
+        "name": "12in Mattress Box | Lowe's Store Display",
+        "studio": "Print | Package Design",
+        "employer": "Soft-Tex Manufacturing"
+      },
+      {
+        "img": "sp-coolingnylon-box.jpg",
+        "name": "SensorPEDIC Cooling Nylon Pillow Box",
+        "studio": "Print | Package Design",
+        "employer": "Soft-Tex Manufacturing"
+      },
+      {
+        "name": "Gemini",
+        "months": "May 21 to Jun 20",
+        "posTraits": "Spontaneous, Funny",
+        "negTraits": "Indecisive, Confusing"
+      },
+      {
+        "name": "Cancer",
+        "months": "Jun 21 to Jul 22",
+        "posTraits": "Loving, Imaginative",
+        "negTraits": "Moody, Sensitive"
+      },
+      {
+        "name": "Leo",
+        "months": "Jul 23 to Aug 22",
+        "posTraits": "Warmhearted, Proud",
+        "negTraits": "Pompous, Patronizing"
+      },
+      {
+        "name": "Virgo",
+        "months": "Aug 23 to Sep 22",
+        "posTraits": "Modest, Meticulous",
+        "negTraits": "Worrier, Overcritical"
+      },
+      {
+        "name": "Libra",
+        "months": "Sep 23 to Oct 22",
+        "posTraits": "Easygoing, Sociable",
+        "negTraits": "Lazy, Careless"
+      },
+      {
+        "name": "Scorpio",
+        "months": "Oct 24 to Nov 22",
+        "posTraits": "Determined, Intuitive",
+        "negTraits": "Jealous, Resentful"
+      },
+      {
+        "name": "Sagittarius",
+        "months": "Nov 22 to Dec 21",
+        "posTraits": "Optimistic, Honest",
+        "negTraits": "Irresponsible"
+      },
+      {
+        "name": "Capricorn",
+        "months": "Dec 22 to Jan 19",
+        "posTraits": "Practical, Ambitious",
+        "negTraits": "Pessimistic"
+      },
+      {
+        "name": "Aquarius",
+        "months": "Jan 20 to Feb 18",
+        "posTraits": "Loyal, Inventive",
+        "negTraits": "Detached"
+      },
+      {
+        "name": "Pisces",
+        "months": "Feb 19 to Mar 20",
+        "posTraits": "Compassionate, Selfless",
+        "negTraits": "Secretive, Vague"
+      }
+    ]
+  }

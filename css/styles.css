@@ -1,0 +1,35 @@
+#mainContainer-belowHeader {
+
+}
+.sectionContainer {
+    padding: 2em;
+}
+.carousel-inner {
+    background-color: #fff;
+}
+.carousel-caption {
+    position: relative;
+    display: block;
+    right: 0;
+    bottom: 0;
+    left: 2%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #bbb;
+    text-align: center;
+}
+.w-100 {
+    width: auto !important;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+.work-cats {
+    height: auto;
+    display: flex;
+    overflow: hidden;
+}
+#categories-banner {
+    display: flex;
+    flex-direction: row;
+}
