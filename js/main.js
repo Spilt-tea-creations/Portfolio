@@ -1,6 +1,49 @@
 const url = "./assets/portfolio.json";
 const result = document.querySelector(".js-result");
 
+
+document.addEventListener('click', (btn) =>
+{
+  let elementId = btn.target.id;
+  if (elementId !== '') {
+      console.log(elementId);
+      displayProjectsData();
+  }
+  else { 
+      console.log("An element without an id was clicked.");
+  }
+}
+);
+
+function displayProjectsData() {
+    fetch(url)
+    .then(data => data.json()) 
+    .then(displayProjectsJson)
+    .catch(errorHandling);  
+}  
+
+function errorHandling() {
+    let error = document.querySelector(".js-error");
+    error.innerHTML = `
+        <h1>Error!</h1>
+        <p>Please wait a few minutes before refreshing the page and trying again</p>
+    `;
+}
+
+function displayProjectsJson(projects) {
+    let selectedStudio = elementId;
+    let html = '';
+    if (selectedStudio === elementId) {
+        for (let project of projects.projects) {
+            html += getProjectsMarkup(projects);
+        }
+    } 
+    else {
+        errorHandling();
+    }
+    result.innerHTML = html;
+}
+
 function getProjectsMarkup(project) {
     return `
     <li class="col-md-4 project-box project-box-container">
@@ -19,50 +62,6 @@ function getProjectsMarkup(project) {
     `;
 }
 
-function displayProjectsJson(projects) {
-    let selectedStudio = elementId;
-    let html = '';
-    if (selectedStudio === elementId) {
-        for (let project of projects.projects) {
-            html += getProjectsMarkup(projects);
-        }
-    } 
-    else {
-        errorHandling();
-    }
-    result.innerHTML = html;
-}
 
-function errorHandling() {
-    let error = document.querySelector(".js-error");
-    error.innerHTML = `
-        <h1>Error!</h1>
-        <p>Please wait a few minutes before refreshing the page and trying again</p>
-    `;
 
-}
 
-function displayProjectsData() {
-    fetch(url)
-    .then(function (res) {
-        return res.json()
-    }).then(displayProjectsJson)
-    .catch(errorHandling);  
-}  
-
-  // Create event listener
-  document.addEventListener('click', (btn) =>
-  {
-    // Retrieve id from clicked element
-    let elementId = btn.target.id;
-    // If element has id
-    if (elementId !== '') {
-        console.log(elementId);
-        displayProjectsData();
-    }
-    // If element has no id
-    else { 
-        console.log("An element without an id was clicked.");
-    }
-  }
-  );
