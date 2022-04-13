@@ -1,28 +1,18 @@
 const url = "./assets/portfolio.json";
 const result = document.querySelector(".js-result");
-const form = document.querySelector(".js-form");
-const signSelection = document.querySelector(".signSelector");
 
-function getZodiacSignMarkup(zodiacSign) {
+function getProjectsMarkup(project) {
     return `
-    <li class="col-md-4 zodiac-box zodiac-box-container">
-        <div class="zodiac-box-item">
-            <img class="zodiacSign-img" src="assets/star-sign-${zodiacSign.name}.jpg" />
+    <li class="col-md-4 project-box project-box-container">
+        <div class="project-box-item">
+            <img class="project-img" src="assets/${projects.img}" />
         </div>
-        <div class="zodiac-box-item zodiac-box-text">
-            <div class="zodiac-box-header">
-                <h2>${zodiacSign.name}</h2>
-                <h4>${zodiacSign.months}</h4>
-            </div>
-            <div class="signTraits-container">
-                <div class="signTraitType">
-                    <h4 class="pos">Positive Traits</h4>
-                    <p>${zodiacSign.posTraits}</p>
-                </div>
-                <div class="signTraitType">
-                    <h4 class="neg">Negative Traits</h4>
-                    <p>${zodiacSign.negTraits}</p>
-                </div>
+        <div class="project-box-item project-box-text">
+            <div class="project-box-header">
+                <h2>${project.name}</h2>
+                <h4>${project.studio}</h4>
+                <h4>${project.employer}</h4>
+                <h4>${project.date}</h4>
             </div>
         </div>
     </li>
@@ -30,20 +20,15 @@ function getZodiacSignMarkup(zodiacSign) {
 }
 
 function displayProjectsJson(projects) {
-    let selectedSign = signSelection.value;
+    let selectedStudio = elementId;
     let html = '';
-    if (selectedSign === 'All') {
-        for (let zodiacSign of zodiacSigns.zodiacSigns) {
-            html += getZodiacSignMarkup(zodiacSign);
+    if (selectedStudio === elementId) {
+        for (let project of projects.projects) {
+            html += getProjectsMarkup(projects);
         }
     } 
     else {
-        for (let zodiacSign of zodiacSigns.zodiacSigns) {
-            if (zodiacSign.name === selectedSign) {
-                html += getZodiacSignMarkup(zodiacSign);
-                break;
-            }
-        }
+        errorHandling();
     }
     result.innerHTML = html;
 }
@@ -65,9 +50,19 @@ function displayProjectsData() {
     .catch(errorHandling);  
 }  
 
-function handleChanged(event) {
-    event.preventDefault();
-    displayProjectsData();
-}
-
-form.addEventListener('change', handleChanged);
+  // Create event listener
+  document.addEventListener('click', (btn) =>
+  {
+    // Retrieve id from clicked element
+    let elementId = btn.target.id;
+    // If element has id
+    if (elementId !== '') {
+        console.log(elementId);
+        displayProjectsData();
+    }
+    // If element has no id
+    else { 
+        console.log("An element without an id was clicked.");
+    }
+  }
+  );
