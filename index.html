@@ -99,13 +99,14 @@
           </button>
         </div>
       </div>
-      <div class="btn-group studio-btn-container" role="group" aria-label="Projects button group">
-        <button class="btn btn-lg btn-primary studio-btn" type="button" id="print" >Print Studio</button>
-        <button class="btn btn-lg btn-primary studio-btn" type="button" id="digital" >Digital Studio</button>
-        <button class="btn btn-lg btn-primary studio-btn" type="button" id="branding" >Branding Studio</button>
-        <button class="btn btn-lg btn-primary studio-btn" type="button" id="photography" >Photography Studio</button>
-      </div>
-      </div>
+      <form action="#" method="GET" class="form js-form">
+        <div class="btn-group studio-btn-container" role="group" aria-label="Projects button group">
+          <button class="btn btn-lg btn-primary studio-btn" type="submit" value="Print" id="Print" >Print Studio</button>
+          <button class="btn btn-lg btn-primary studio-btn" type="submit" value="Digital" id="Digital" >Digital Studio</button>
+          <button class="btn btn-lg btn-primary studio-btn" type="submit" value="Branding" id="Branding" >Branding Studio</button>
+          <button class="btn btn-lg btn-primary studio-btn" type="submit" value="Photography" id="Photography" >Photography Studio</button>
+        </div>
+      </form>
       <div class="col">
           <ul class="col-md-12 js-result projects-box-container"></ul>
           <ul class="col-md-12 js-error"></ul>

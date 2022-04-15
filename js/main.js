@@ -1,12 +1,14 @@
-const url = "./assets/portfolio.json";
+const url = "./assets/project.json";
 const result = document.querySelector(".js-result");
+const studioSelection = document.querySelector(".studio-btn");
 
 
-document.addEventListener('click', (btn) =>
+
+document.addEventListener('click', (submit) =>
 {
-  let elementId = btn.target.id;
-  if (elementId !== '') {
-      console.log(elementId);
+  let studioSelection = submit.target.id;
+  if (studioSelection !== '') {
+      console.log(studioSelection);
       displayProjectsData();
   }
   else { 
@@ -17,9 +19,10 @@ document.addEventListener('click', (btn) =>
 
 function displayProjectsData() {
     fetch(url)
-    .then(data => data.json()) 
-    .then(displayProjectsJson)
-    .catch(errorHandling);  
+    .then(function (res) {
+        return res.json()
+    }).then(displayProjectsJson)
+    .catch(errorHandling);   
 }  
 
 function errorHandling() {
@@ -31,15 +34,19 @@ function errorHandling() {
 }
 
 function displayProjectsJson(projects) {
-    let selectedStudio = elementId;
     let html = '';
-    if (selectedStudio === elementId) {
-        for (let project of projects.projects) {
-            html += getProjectsMarkup(projects);
+    if (studioSelection === '') {
+        for (let project of projects) {
+            html += getProjectsMarkup(project);
         }
     } 
     else {
-        errorHandling();
+        for (let project of projects) {
+            if (studioSelection === project.studio) {
+                html += getProjectsMarkup(project);
+                break;
+            }
+        }
     }
     result.innerHTML = html;
 }
