@@ -31,9 +31,11 @@ function displayProjectsJson(projects) {
         }
     }
     else {
-        for (let i = 0; i < Object.length.function studioFilter(project.studio === selectedStudio); i++) {
+        if (selectedStudio === 'All') {
+            for (let project of projects.projects) {
                 html += getProjectMarkup(project);
             }
+       
         }
     }
     result.innerHTML = html;
