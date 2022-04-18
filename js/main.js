@@ -1,4 +1,4 @@
-const url = "portfolio.json";
+const url = "./assets/portfolio.json";
 const result = document.querySelector(".js-result");
 const form = document.querySelector(".js-form");
 const studioSelection = document.querySelector(".studioSelector");
@@ -6,13 +6,15 @@ const studioSelection = document.querySelector(".studioSelector");
 function getProjectMarkup(project) {
     return `
     <li class="col-md-4 project-box project-box-container">
-        <div class="project-box-item">
-            <img class="project-img" src="assets/${project.name}.png" />
+        <div class="project-box-item img-container">
+            <img class="project-img" src="assets/${project.img}" />
         </div>
         <div class="project-box-item project-box-text">
             <div class="project-box-header">
-                <h2>${project.name}</h2>
-                <h4>${project.studio}</h4>
+                <h3>${project.name}</h3>
+                <h5>${project.employer}</h5>
+                <h5>${project.date}</h5>
+                <h5>${project.studio}</h5>
             </div>
         </div>
     </li>
@@ -25,14 +27,12 @@ function displayProjectsJson(projects) {
     let html = '';
     if (selectedStudio === 'All') {
         for (let project of projects.projects) {
-            html += getProjectMarkup(projects);
+            html += getProjectMarkup(project);
         }
-    } 
+    }
     else {
-        for (let project of projects.projects) {
-            if (projects.studio === selectedStudio) {
-                html += getProjectMarkup(projects);
-                break;
+        for (let i = 0; i < Object.length.function studioFilter(project.studio === selectedStudio); i++) {
+                html += getProjectMarkup(project);
             }
         }
     }
@@ -50,9 +50,10 @@ function errorHandling() {
 
 function displayProjectsData() {
     fetch(url)
-    .then(function (res) {
-        return res.json()
-    }).then(displayProjectsJson)
+    .then(function (response) {
+        return response.json();
+      })
+    .then(displayProjectsJson)
     .catch(errorHandling);  
 }  
 function handleSubmit(event) {
