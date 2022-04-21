@@ -1,39 +1,68 @@
 {
     "projects": [
       {
-        "img": "st_linenSource_catalogPage.png",
-        "name": "Linen Source Catalog Page",
+        "img": "print-00.png",
+        "name": "Satellite 2021 Anniversary Ad",
         "studio": "Print",
-        "employer": "Soft-Tex Manufacturing",
-        "date": "2016-03"
+        "employer": "Logus Microwave",
+        "year": "2021"
       },
       {
-        "img": "st_bbb-ua_6in-mattress-box.png",
+        "img": "print-06.png",
         "name": "Bed Bath & Beyond Under Armour 6 inch Mattress Box",
         "studio": "Print",
         "employer": "Soft-Tex Manufacturing",
-        "date": "2016-07"
+        "year": "2016"
       },
       {
-        "img": "st_bbb-ua_storeDisplay.png",
-        "name": "Bed Bath & Beyond Under Armour Bedding Performance Collection",
-        "studio": "Print",
-        "employer": "Soft-Tex Manufacturing",
-        "date": "2016-07"
-      },
-      {
-        "img": "st_bbb-ua_storeDisplay.png",
-        "name": "Bed Bath & Beyond Under Armour Bedding Performance Collection",
-        "studio": "Print",
-        "employer": "Soft-Tex Manufacturing",
-        "date": "2016-07"
-      },
-      {
-        "img": "stc_korasadowicz_wedding_invitation.png",
+        "img": "print-17.png",
         "name": "Korasadowicz Wedding Invitation",
         "studio": "Print",
         "employer": "Spilt Tea Creations",
-        "date": "2016-12"
+        "year": "2016"
+      },
+      {
+        "img": "brand-00.png",
+        "name": "Fishin' Skinny Logo",
+        "studio": "Branding",
+        "employer": "Logus Microwave",
+        "year": "2019"
+      },
+      {
+        "img": "brand-01b.png",
+        "name": "Logus Quick Ship Logo",
+        "studio": "Branding",
+        "employer": "Logus Microwave",
+        "year": "2020"
+      },
+      {
+        "img": "brand-02b.png",
+        "name": "HD Printing Logo Concepts",
+        "studio": "Branding",
+        "employer": "Emily Scott",
+        "year": "2021"
+      },
+      {
+        "img": "dig-02a.jpg",
+        "name": "DreamSmart Website",
+        "studio": "Digital",
+        "employer": "Soft-text Manufacturing",
+        "year": "2016"
+      },
+      {
+        "img": "dig-02b.jpg",
+        "name": "DreamSmart Website",
+        "studio": "Digital",
+        "employer": "Soft-text Manufacturing",
+        "year": "2016"
+      },
+      {
+        "img": "photo-00.png",
+        "name": "Mud & Glitter Photoshoot (hand)",
+        "studio": "Photography",
+        "employer": "Spilt Tea Creations",
+        "year": "2014"
       }
+      
     ]
   }

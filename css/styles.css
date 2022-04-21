@@ -50,11 +50,12 @@ body {
 .project-img {
     width: 100%;
     height: auto;
-    border-radius: 100px;
 }
 .img-container{
     width auto;
     height: 300px;
+    overflow: auto;
+
 }
 .fetchContainer {
     margin-top: 2rem;

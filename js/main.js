@@ -6,16 +6,12 @@ const studioSelection = document.querySelector(".studioSelector");
 function getProjectMarkup(project) {
     return `
     <li class="col-md-4 project-box project-box-container">
-        <div class="project-box-item img-container">
-            <img class="project-img" src="assets/${project.img}" />
-        </div>
-        <div class="project-box-item project-box-text">
-            <div class="project-box-header">
-                <h3>${project.name}</h3>
-                <h5>${project.employer}</h5>
-                <h5>${project.date}</h5>
-                <h5>${project.studio}</h5>
-            </div>
+        <div class="project-box-item img-container project-box-header">
+        <h3>${project.name}</h3>
+        <h5>${project.employer}</h5>
+        <h5>${project.year}</h5>
+        <h5>${project.studio}</h5>
+        <img class="project-img" src="assets/${project.img}" />
         </div>
     </li>
     `;
@@ -30,12 +26,11 @@ function displayProjectsJson(projects) {
             html += getProjectMarkup(project);
         }
     }
-    else {
-        if (selectedStudio === 'All') {
-            for (let project of projects.projects) {
+    else {for (let project of projects.projects) {
+            if (project.studio === selectedStudio) {
                 html += getProjectMarkup(project);
+                
             }
-       
         }
     }
     result.innerHTML = html;
